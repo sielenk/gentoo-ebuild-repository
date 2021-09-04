@@ -20,6 +20,10 @@ IUSE="static-libs"
 
 BDEPEND="virtual/pkgconfig"
 
+PATCHES=(
+	"${FILESDIR}"/${PN}-termiox.patch
+)
+
 src_prepare() {
 	default
 
