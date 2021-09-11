@@ -18,7 +18,10 @@ LICENSE="LGPL-3"
 SLOT="0"
 IUSE="static-libs"
 
-BDEPEND="virtual/pkgconfig"
+BDEPEND="
+	virtual/pkgconfig
+	sys-devel/automake:1.15
+"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-termiox.patch
