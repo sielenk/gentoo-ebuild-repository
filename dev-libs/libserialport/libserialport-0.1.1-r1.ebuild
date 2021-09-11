@@ -18,10 +18,7 @@ LICENSE="LGPL-3"
 SLOT="0"
 IUSE="static-libs"
 
-BDEPEND="
-	virtual/pkgconfig
-	sys-devel/automake:1.15
-"
+BDEPEND="virtual/pkgconfig"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-termiox.patch
@@ -30,7 +27,7 @@ PATCHES=(
 src_prepare() {
 	default
 
-	[[ ${PV} == "9999" ]] && eautoreconf
+	eautoreconf
 }
 
 src_configure() {
